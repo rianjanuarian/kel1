@@ -36,26 +36,18 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        //Make activity fullScreen for better UI
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
 
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         progressBar = findViewById(R.id.siProgressbar);
         progressBar.setVisibility(View.GONE);
-
         //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //    getSupportActionBar().setTitle(null);
-
         //Image slider
         SliderView sliderView = findViewById(R.id.imageSlider);
         ImageSliderAdapter adapter = new ImageSliderAdapter(this);
-
         sliderView.setSliderAdapter(adapter);
-        //set indicator animation by using SliderLayout.IndicatorAnimations.
-        // :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setIndicatorAnimation(IndicatorAnimations.DROP);
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
@@ -89,12 +81,12 @@ public class LoginActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (e != null) {
                     // TODO: better error notifications to users
-                    Toast.makeText(LoginActivity.this, "There is a problem with your username or password, please check them and try again.", Toast.LENGTH_LONG).show();
-                    Log.e(TAG, "issue with login");
+                    Toast.makeText(LoginActivity.this, "Username atau Password Salah", Toast.LENGTH_LONG).show();
+                    Log.e(TAG, "login bermasalah");
                     e.printStackTrace();
                     return;
                 }
-                Toast.makeText(LoginActivity.this, "Login succes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Login sukses", Toast.LENGTH_SHORT).show();
                 goMainActivity();
 
             }
@@ -103,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void goMainActivity() {
-        Log.d(TAG, "Navigating to MainActivity");
+        Log.d(TAG, "");
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
         finish();
