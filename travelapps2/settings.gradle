@@ -1,0 +1,2 @@
+rootProject.name='travelapps2'
+include ':app'
