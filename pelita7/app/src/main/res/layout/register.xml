@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scaleType="centerCrop"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/light"
+        >
+        <!-- Register Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="17dip"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Nama Lengkap"
+                android:layout_marginTop="40px" />
+            <EditText
+                android:id="@+id/regfullname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="10dip"
+                android:singleLine="true" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="email"
+                android:layout_marginTop="5px" />
+            <EditText
+                android:id="@+id/regusername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="10dip"
+                android:singleLine="true"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/regpassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:inputType="textPassword"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip">
+
+                <Button
+                    android:id="@+id/btnsubmit"
+                    android:layout_width="105dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-72dp"
+                    android:layout_toLeftOf="@+id/view"
+                    android:background="@drawable/button_shape"
+                    android:shadowColor="#01458E"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="Submit"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dip" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_height="1dp"
+                    android:layout_width="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+            </RelativeLayout>
+            <TextView android:id="@+id/link_to_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="40dip"
+                android:text="Punya akun? Login!"
+                android:gravity="center"
+                android:textSize="15dip"
+                android:textColor="#025f7c"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
